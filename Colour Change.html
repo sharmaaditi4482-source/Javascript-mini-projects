@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Color Blocks Practice</title>
+
+    <!-- CSS is written here -->
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            margin: 50px;
+            border-radius: 10px;
+
+        }
+
+        #grey {
+            background-color: black;
+        }
+
+        #red {
+            background-color: purple;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        #yellow {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Color Blocks</h1>
+
+    <p class="container">
+    <p class="box" id="grey"></p>
+    <p class="box" id="red"></p>
+    <p class="box" id="blue"></p>
+    <p class="box" id="yellow"></p>
+    </p>
+
+</body>
+
+</html>
+
+
+<script>
+    const body = document.querySelector('body')
+    const a = document.querySelectorAll('.box');
+    a.forEach(function (s) {
+        s.addEventListener('click', function (e) {
+            if (e.target.id == 'grey') {
+                body.style.backgroundColor = 'grey';
+            }
+            if (e.target.id == 'red') {
+                body.style.backgroundColor = 'orange';
+            }
+            if (e.target.id == 'blue') {
+                body.style.backgroundColor = 'pink';
+            }
+            if (e.target.id == 'yellow') {
+                body.style.backgroundColor = 'green';
+            }
+        })
+    })
+
+</script>
+
+</body>
+
+</html>
